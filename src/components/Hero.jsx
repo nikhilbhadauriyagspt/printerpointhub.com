@@ -83,7 +83,7 @@ export default function Hero() {
             y: [0, 30, 0]
           }}
           transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-          className="absolute top-[-10%] right-[-5%] w-[50%] h-[60%] bg-indigo-100/40 blur-[120px] rounded-full pointer-events-none" 
+          className="absolute top-[-10%] right-[-5%] w-[50%] h-[60%] bg-indigo-100/20 blur-[80px] rounded-full pointer-events-none" 
         />
         <motion.div 
           animate={{ 
@@ -92,7 +92,7 @@ export default function Hero() {
             y: [0, -20, 0]
           }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[50%] bg-indigo-50/50 blur-[100px] rounded-full pointer-events-none" 
+          className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[50%] bg-indigo-50/30 blur-[60px] rounded-full pointer-events-none" 
         />
         {/* Tech Grid Pattern */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
@@ -154,7 +154,7 @@ export default function Hero() {
                     </motion.button>
                   </Link>
                   
-                  <div className="flex items-center gap-4 bg-white/80 backdrop-blur-xl px-5 py-2.5 rounded-xl border border-white shadow-xl">
+                  <div className="flex items-center gap-4 bg-white/80 backdrop-blur-xl px-5 py-2.5 rounded-xl border border-white shadow-sm">
                     <img src="/brands/hp.png" alt="HP" className="h-6 w-6 object-contain" />
                     <div className="flex flex-col">
                       <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Authorized</span>
@@ -196,7 +196,7 @@ export default function Hero() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 1.02 }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className="absolute inset-0 rounded-[2.5rem] lg:rounded-[3.5rem] overflow-hidden shadow-2xl group bg-white border-[10px] border-white"
+                  className="absolute inset-0 rounded-[2.5rem] lg:rounded-[3.5rem] overflow-hidden shadow-md group bg-white border-[10px] border-white"
                 >
                   <img 
                     src={slides[current].image} 
@@ -209,10 +209,10 @@ export default function Hero() {
 
               {/* Controls */}
               <div className="absolute bottom-8 right-8 flex items-center gap-2 z-40">
-                 <button onClick={prevSlide} className="h-12 w-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all duration-300 group shadow-lg">
+                 <button onClick={prevSlide} className="h-12 w-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all duration-300 group shadow-sm">
                     <ChevronLeft size={20} />
                  </button>
-                 <button onClick={nextSlide} className="h-12 w-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all duration-300 group shadow-lg">
+                 <button onClick={nextSlide} className="h-12 w-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all duration-300 group shadow-sm">
                     <ChevronRight size={20} />
                  </button>
               </div>
