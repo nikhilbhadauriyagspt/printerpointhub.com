@@ -57,7 +57,7 @@ export default function Footer() {
     <footer className="bg-white text-slate-900 pt-20 pb-10 font-urbanist relative overflow-hidden border-t border-slate-100">
       
       {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-[40%] h-[40%] bg-blue-50/30 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[40%] h-[40%] bg-indigo-50/30 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-[1920px] mx-auto px-6 md:px-10 lg:px-16 relative z-10">
         
@@ -65,7 +65,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
           <div className="lg:col-span-5 space-y-8">
             <Link to="/" className="inline-flex items-center gap-5 group">
-              <img src="/logo/EASYMYPRINT.png" alt="EASYMYPRINT" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" />
+              <img src="/logo/EASYMYPRINT.png" alt="Printer Point Hub" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" />
               <div className="h-8 w-px bg-slate-200" />
               <div className="flex flex-col justify-center leading-none">
                 <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">A Subsidiary of</span>
@@ -77,12 +77,8 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
                <div className="flex items-center gap-3 px-5 py-2.5 bg-slate-50 border border-slate-100 rounded-2xl shadow-sm">
-                  <ShieldCheck size={16} className="text-blue-600" />
+                  <ShieldCheck size={16} className="text-indigo-600" />
                   <span className="text-[10px] font-black uppercase tracking-widest text-slate-900">Authorized HP Partner</span>
-               </div>
-               <div className="flex items-center gap-3 px-5 py-2.5 bg-slate-50 border border-slate-100 rounded-2xl shadow-sm">
-                  <Globe size={16} className="text-blue-600" />
-                  <span className="text-[10px] font-black uppercase tracking-widest text-slate-900">Global Support</span>
                </div>
             </div>
           </div>
@@ -91,7 +87,7 @@ export default function Footer() {
             <div className="w-full bg-slate-900 text-white p-10 rounded-[2.5rem] relative overflow-hidden group shadow-2xl">
                <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                   <div>
-                    <h4 className="text-[10px] font-black text-blue-400 uppercase tracking-[0.4em] mb-4">Stay Informed</h4>
+                    <h4 className="text-[10px] font-black text-indigo-400 uppercase tracking-[0.4em] mb-4">Stay Informed</h4>
                     <h3 className="text-2xl lg:text-3xl font-black text-white uppercase tracking-tight leading-tight">Subscribe to our <br/><span className="text-transparent stroke-text-white">Professional Updates.</span></h3>
                   </div>
                   <form onSubmit={handleSubscribe} className="relative group/form">
@@ -102,7 +98,7 @@ export default function Footer() {
                     />
                     <button
                       disabled={loading}
-                      className="absolute right-1.5 top-1.5 bottom-1.5 px-6 bg-blue-600 text-white rounded-lg flex items-center justify-center hover:bg-slate-900 transition-all font-black text-[10px] uppercase tracking-widest shadow-lg"
+                      className="absolute right-1.5 top-1.5 bottom-1.5 px-6 bg-indigo-600 text-white rounded-lg flex items-center justify-center hover:bg-slate-900 transition-all font-black text-[10px] uppercase tracking-widest shadow-lg"
                     >
                       {loading ? <Loader2 className="animate-spin" size={16} /> : "Join"}
                     </button>
@@ -115,12 +111,12 @@ export default function Footer() {
         {/* --- LINKS GRID --- */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-12 mb-20 pt-20 border-t border-slate-50">
           <div className="lg:col-span-3">
-            <h4 className="text-[11px] font-black text-blue-600 uppercase tracking-[0.4em] mb-8">Collections</h4>
+            <h4 className="text-[11px] font-black text-indigo-600 uppercase tracking-[0.4em] mb-8">Collections</h4>
             <ul className="space-y-4">
               {categories.map(cat => (
                 <li key={cat.id}>
                   <Link to={`/shop?category=${cat.slug}`} className="text-slate-500 hover:text-slate-900 transition-colors text-[13px] font-black uppercase tracking-tight flex items-center gap-3 group">
-                    <div className="h-1 w-1 rounded-full bg-slate-200 group-hover:bg-blue-600 transition-colors" />
+                    <div className="h-1 w-1 rounded-full bg-slate-200 group-hover:bg-indigo-600 transition-colors" />
                     {cat.name}
                   </Link>
                 </li>
@@ -129,7 +125,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-[11px] font-black text-blue-600 uppercase tracking-[0.4em] mb-8">Support Hub</h4>
+            <h4 className="text-[11px] font-black text-indigo-600 uppercase tracking-[0.4em] mb-8">Support Hub</h4>
             <ul className="space-y-4">
               {[
                 { name: 'About Us', path: '/about' },
@@ -139,7 +135,7 @@ export default function Footer() {
               ].map(item => (
                 <li key={item.name}>
                   <Link to={item.path} className="text-slate-500 hover:text-slate-900 transition-colors text-[13px] font-black uppercase tracking-tight flex items-center gap-3 group">
-                    <div className="h-1 w-1 rounded-full bg-slate-200 group-hover:bg-blue-600 transition-colors" />
+                    <div className="h-1 w-1 rounded-full bg-slate-200 group-hover:bg-indigo-600 transition-colors" />
                     {item.name}
                   </Link>
                 </li>
@@ -148,7 +144,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-[11px] font-black text-blue-600 uppercase tracking-[0.4em] mb-8">Legal Policies</h4>
+            <h4 className="text-[11px] font-black text-indigo-600 uppercase tracking-[0.4em] mb-8">Legal Policies</h4>
             <ul className="space-y-4">
               {[
                 { name: 'Privacy Policy', path: '/privacy-policy' },
@@ -159,7 +155,7 @@ export default function Footer() {
               ].map(item => (
                 <li key={item.name}>
                   <Link to={item.path} className="text-slate-500 hover:text-slate-900 transition-colors text-[13px] font-black uppercase tracking-tight flex items-center gap-3 group">
-                    <div className="h-1 w-1 rounded-full bg-slate-200 group-hover:bg-blue-600 transition-colors" />
+                    <div className="h-1 w-1 rounded-full bg-slate-200 group-hover:bg-indigo-600 transition-colors" />
                     {item.name}
                   </Link>
                 </li>
@@ -168,21 +164,21 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-[11px] font-black text-blue-600 uppercase tracking-[0.4em] mb-8">Location</h4>
+            <h4 className="text-[11px] font-black text-indigo-600 uppercase tracking-[0.4em] mb-8">Location</h4>
             <div className="space-y-6">
                <div className="flex items-start gap-4">
                   <div className="h-10 w-10 rounded-xl bg-slate-50 flex items-center justify-center border border-slate-100 shrink-0">
-                    <MapPin size={18} className="text-blue-600" />
+                    <MapPin size={18} className="text-indigo-600" />
                   </div>
                   <span className="text-[13px] font-black text-slate-500 leading-relaxed uppercase tracking-tight">
-                    722 N West St <br /> Raleigh, NC 27603, USA
+                    500 W Peace St <br /> Raleigh, NC 27603, USA
                   </span>
                </div>
                <div className="flex items-center gap-4">
                   <div className="h-10 w-10 rounded-xl bg-slate-50 flex items-center justify-center border border-slate-100 shrink-0">
-                    <Mail size={18} className="text-blue-600" />
+                    <Mail size={18} className="text-indigo-600" />
                   </div>
-                  <span className="text-[13px] font-black text-slate-500 tracking-tight">info@easymyprint.shop</span>
+                  <span className="text-[13px] font-black text-slate-500 tracking-tight">info@printerpointhub.com</span>
                </div>
             </div>
           </div>
@@ -200,18 +196,15 @@ export default function Footer() {
         {/* --- BOTTOM BAR --- */}
         <div className="pt-10 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-8 text-[10px] font-black tracking-[0.2em] uppercase text-slate-400">
-            <span>© 2026 EASYMYPRINT | ALL RIGHTS RESERVED. <span className="mx-2">|</span> A SUBSIDIARY OF PRIMEFIX SOLUTIONS LLC</span>
-            <div className="hidden sm:flex items-center gap-3 border-l border-slate-100 pl-8 text-[10px]">
-              <Globe size={14} /> <span>USA | GLOBAL NETWORK</span>
-            </div>
+            <span>© 2026 PRINTER POINT HUB | ALL RIGHTS RESERVED. <span className="mx-2">|</span> A SUBSIDIARY OF PRIMEFIX SOLUTIONS LLC</span>
           </div>
 
           <div className="flex items-center gap-8 grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-700">
              <div className="flex items-center gap-3">
-                <ShieldCheck size={16} className="text-blue-600" />
+                <ShieldCheck size={16} className="text-indigo-600" />
                 <span className="text-[10px] font-black uppercase tracking-widest text-slate-950">Verified Merchant</span>
              </div>
-             <div className="text-blue-600 italic font-black text-xl">PayPal</div>
+             <div className="text-indigo-600 italic font-black text-xl">PayPal</div>
           </div>
         </div>
 

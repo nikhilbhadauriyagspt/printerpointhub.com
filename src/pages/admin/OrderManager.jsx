@@ -70,7 +70,7 @@ export default function OrderManager() {
 
   const statusColors = {
     pending: 'bg-amber-50 text-amber-600 border-amber-100',
-    processing: 'bg-blue-50 text-blue-600 border-blue-100',
+    processing: 'bg-indigo-50 text-indigo-600 border-blue-100',
     shipped: 'bg-indigo-50 text-indigo-600 border-indigo-100',
     out_for_delivery: 'bg-purple-50 text-purple-600 border-purple-100',
     delivered: 'bg-emerald-50 text-emerald-600 border-emerald-100',
@@ -93,7 +93,7 @@ export default function OrderManager() {
             placeholder="SEARCH BY ORDER ID, NAME, EMAIL..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="pl-12 pr-6 h-14 w-full md:w-96 bg-white border border-gray-200 rounded-2xl focus:border-blue-600 outline-none text-xs font-bold uppercase transition-all"
+            className="pl-12 pr-6 h-14 w-full md:w-96 bg-white border border-gray-200 rounded-2xl focus:border-indigo-600 outline-none text-xs font-bold uppercase transition-all"
           />
         </div>
       </div>
@@ -115,7 +115,7 @@ export default function OrderManager() {
               {loading ? (
                 <tr>
                   <td colSpan="5" className="py-20 text-center">
-                    <Loader2 className="animate-spin h-8 w-8 text-blue-600 mx-auto mb-4" />
+                    <Loader2 className="animate-spin h-8 w-8 text-indigo-600 mx-auto mb-4" />
                     <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Loading Orders...</p>
                   </td>
                 </tr>
@@ -135,7 +135,7 @@ export default function OrderManager() {
                   </td>
                   <td className="px-8 py-6">
                     <div className="flex flex-col">
-                      <span className="text-sm font-black text-blue-600">${order.total_amount}</span>
+                      <span className="text-sm font-black text-indigo-600">${order.total_amount}</span>
                       <span className="text-[10px] font-bold text-slate-400 uppercase mt-1">{order.payment_method}</span>
                     </div>
                   </td>
@@ -177,7 +177,7 @@ export default function OrderManager() {
               <div className="p-8 border-b border-gray-100 flex items-center justify-between">
                 <div>
                   <h2 className="text-2xl font-black text-slate-900 tracking-tighter uppercase">Order Details.</h2>
-                  <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest mt-1">#PFX-{selectedOrder.id}</p>
+                  <p className="text-[10px] font-black text-indigo-600 uppercase tracking-widest mt-1">#PFX-{selectedOrder.id}</p>
                 </div>
                 <button onClick={() => setSelectedOrder(null)} className="h-12 w-12 rounded-full bg-gray-50 flex items-center justify-center hover:bg-black hover:text-white transition-all">
                   <X size={20} />
@@ -187,7 +187,7 @@ export default function OrderManager() {
               <div className="flex-1 overflow-y-auto p-8 space-y-10 custom-scrollbar">
                 {/* Status Update */}
                 <div className="bg-slate-900 rounded-[2rem] p-8 text-white">
-                  <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-400 mb-6">Update Status</h3>
+                  <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-indigo-400 mb-6">Update Status</h3>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                     {Object.keys(statusColors).map((s) => (
                       <button 
@@ -195,7 +195,7 @@ export default function OrderManager() {
                         onClick={() => updateStatus(selectedOrder.id, s)}
                         className={`px-4 py-3 rounded-xl text-[9px] font-black uppercase tracking-widest border transition-all ${
                           selectedOrder.status === s 
-                          ? 'bg-blue-600 border-blue-600 text-white' 
+                          ? 'bg-indigo-600 border-indigo-600 text-white' 
                           : 'bg-white/5 border-white/10 text-white/60 hover:bg-white/10 hover:text-white'
                         }`}
                       >
@@ -244,7 +244,7 @@ export default function OrderManager() {
                           </div>
                           <p className="text-xs font-black text-slate-900 uppercase truncate max-w-[250px]">{item.product_name}</p>
                         </div>
-                        <p className="text-xs font-black text-blue-600">${item.price}</p>
+                        <p className="text-xs font-black text-indigo-600">${item.price}</p>
                       </div>
                     ))}
                   </div>
@@ -276,7 +276,7 @@ export default function OrderManager() {
                                   <>
                                     <div className="flex justify-between">
                                       <span className="text-[9px] font-bold text-slate-400 uppercase">Transaction ID</span>
-                                      <span className="text-[9px] font-mono font-black text-blue-600">{details.id || 'N/A'}</span>
+                                      <span className="text-[9px] font-mono font-black text-indigo-600">{details.id || 'N/A'}</span>
                                     </div>
                                     <div className="flex justify-between">
                                       <span className="text-[9px] font-bold text-slate-400 uppercase">Payer Email</span>

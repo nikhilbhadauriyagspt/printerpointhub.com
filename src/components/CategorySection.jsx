@@ -39,12 +39,12 @@ export default function CategorySection({ title, subtitle, categoryKeyword, bgCo
     <section className={`px-6 md:px-10 lg:px-12 py-24 ${bgColor} font-urbanist`}>
       <div className="flex items-end justify-between mb-12 border-b border-gray-100 pb-8">
         <div>
-          <span className="text-[10px] font-black tracking-[0.4em] uppercase text-blue-600 mb-2 block ml-1">{subtitle}</span>
+          <span className="text-[10px] font-black tracking-[0.4em] uppercase text-indigo-600 mb-2 block ml-1">{subtitle}</span>
           <h2 className="text-4xl font-black text-slate-900 tracking-tighter uppercase leading-none">
             {title.split(' ')[0]} <span className="text-slate-400 italic">{title.split(' ').slice(1).join(' ')}.</span>
           </h2>
         </div>
-        <button className="text-xs font-black uppercase tracking-widest text-slate-900 flex items-center gap-2 hover:text-blue-600 transition-colors pb-1">
+        <button className="text-xs font-black uppercase tracking-widest text-slate-900 flex items-center gap-2 hover:text-indigo-600 transition-colors pb-1">
           View All <ArrowRight size={14} />
         </button>
       </div>
@@ -62,14 +62,14 @@ export default function CategorySection({ title, subtitle, categoryKeyword, bgCo
               transition={{ delay: i * 0.05 }}
               className="group cursor-pointer"
             >
-              <div className="relative aspect-square bg-white rounded-2xl overflow-hidden mb-3 border border-gray-100 group-hover:border-blue-500/20 transition-all duration-300 flex items-center justify-center p-4">
+              <div className="relative aspect-square bg-white rounded-2xl overflow-hidden mb-3 border border-gray-100 group-hover:border-indigo-500/20 transition-all duration-300 flex items-center justify-center p-4">
                 <img 
                   src={getImagePath(p.images)} 
                   alt={p.name}
                   className="max-w-full max-h-full object-contain transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute bottom-2 left-2 right-2 translate-y-[120%] group-hover:translate-y-0 transition-transform duration-300">
-                  <button className="w-full h-8 bg-black text-white rounded-lg flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-widest hover:bg-blue-600 transition-colors">
+                  <button className="w-full h-8 bg-black text-white rounded-lg flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-widest hover:bg-indigo-600 transition-colors">
                     <ShoppingBag size={12} /> Add
                   </button>
                 </div>

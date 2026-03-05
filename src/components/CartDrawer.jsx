@@ -32,15 +32,15 @@ export default function CartDrawer() {
             className="fixed top-4 right-4 bottom-4 w-full max-w-[480px] bg-white/95 backdrop-blur-3xl z-[1001] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.2)] flex flex-col font-urbanist rounded-[3rem] border border-white/50 overflow-hidden"
           >
             {/* HUD Corner Accents */}
-            <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-blue-600 m-8 opacity-20" />
+            <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-indigo-600 m-8 opacity-20" />
             
             {/* Hub Header */}
             <div className="p-10 border-b border-slate-100 relative">
               <div className="flex items-center justify-between">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
-                     <div className="h-1 w-1 rounded-full bg-blue-600 animate-pulse" />
-                     <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.4em]">Cart Infrastructure</span>
+                     <div className="h-1 w-1 rounded-full bg-indigo-600 animate-pulse" />
+                     <span className="text-[10px] font-black text-indigo-600 uppercase tracking-[0.4em]">Cart Infrastructure</span>
                   </div>
                   <h2 className="text-3xl font-black text-slate-900 tracking-tighter uppercase">Your Selection.</h2>
                 </div>
@@ -63,7 +63,7 @@ export default function CartDrawer() {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       key={item.id} 
-                      className="group flex gap-6 p-5 rounded-[2rem] bg-slate-50/50 border border-transparent hover:bg-white hover:border-blue-100 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-500"
+                      className="group flex gap-6 p-5 rounded-[2rem] bg-slate-50/50 border border-transparent hover:bg-white hover:border-blue-100 hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-500"
                     >
                       <div className="h-24 w-24 rounded-2xl bg-white border border-slate-100 p-4 flex items-center justify-center flex-shrink-0 relative group-hover:scale-105 transition-transform duration-500 shadow-sm">
                         <img 
@@ -77,7 +77,7 @@ export default function CartDrawer() {
                       <div className="flex-1 min-w-0 flex flex-col justify-between py-1">
                         <div>
                           <div className="flex justify-between items-start mb-1">
-                            <span className="text-[9px] font-black text-blue-600 uppercase tracking-widest">{item.brand_name || 'AUTHENTIC'}</span>
+                            <span className="text-[9px] font-black text-indigo-600 uppercase tracking-widest">{item.brand_name || 'AUTHENTIC'}</span>
                             <button 
                               onClick={() => removeFromCart(item.id)}
                               className="text-slate-300 hover:text-red-500 transition-colors p-1"
@@ -90,9 +90,9 @@ export default function CartDrawer() {
 
                         <div className="flex items-center justify-between mt-4">
                           <div className="flex items-center gap-4 bg-white rounded-xl px-3 py-1.5 border border-slate-100 shadow-sm">
-                            <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="text-slate-400 hover:text-blue-600 transition-colors"><Minus size={12} strokeWidth={3} /></button>
+                            <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="text-slate-400 hover:text-indigo-600 transition-colors"><Minus size={12} strokeWidth={3} /></button>
                             <span className="text-xs font-black w-4 text-center text-slate-900">{item.quantity}</span>
-                            <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="text-slate-400 hover:text-blue-600 transition-colors"><Plus size={12} strokeWidth={3} /></button>
+                            <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="text-slate-400 hover:text-indigo-600 transition-colors"><Plus size={12} strokeWidth={3} /></button>
                           </div>
                           <span className="text-base font-black text-slate-900">${(item.price * item.quantity).toLocaleString()}</span>
                         </div>
@@ -110,7 +110,7 @@ export default function CartDrawer() {
                   <Link 
                     to="/shop"
                     onClick={closeCartDrawer}
-                    className="h-14 px-10 bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-blue-600 transition-all shadow-xl flex items-center justify-center"
+                    className="h-14 px-10 bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-indigo-600 transition-all shadow-xl flex items-center justify-center"
                   >
                     Enter Showroom
                   </Link>
@@ -125,14 +125,14 @@ export default function CartDrawer() {
                   <div className="flex flex-col">
                      <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-1">Total Valuation</span>
                      <div className="flex items-center gap-3">
-                        <Activity size={14} className="text-blue-600 animate-pulse" />
+                        <Activity size={14} className="text-indigo-600 animate-pulse" />
                         <span className="text-3xl font-black text-slate-900 tracking-tighter">${total.toLocaleString()}</span>
                      </div>
                   </div>
                   <div className="h-12 w-px bg-slate-200" />
                   <div className="text-right">
                      <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest block mb-1">Items</span>
-                     <span className="text-xl font-black text-blue-600">{cartCount} Units</span>
+                     <span className="text-xl font-black text-indigo-600">{cartCount} Units</span>
                   </div>
                 </div>
 
@@ -147,7 +147,7 @@ export default function CartDrawer() {
                   <Link 
                     to="/checkout"
                     onClick={closeCartDrawer}
-                    className="w-full h-16 bg-blue-600 text-white rounded-[1.5rem] flex items-center justify-center gap-4 text-[11px] font-black uppercase tracking-widest hover:bg-slate-900 transition-all shadow-[0_20px_40px_rgba(37,99,235,0.3)] group"
+                    className="w-full h-16 bg-indigo-600 text-white rounded-[1.5rem] flex items-center justify-center gap-4 text-[11px] font-black uppercase tracking-widest hover:bg-slate-900 transition-all shadow-[0_20px_40px_rgba(37,99,235,0.3)] group"
                   >
                     <ShieldCheck size={18} />
                     INITIALIZE CHECKOUT

@@ -46,8 +46,8 @@ export default function TheVault({ products = [] }) {
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-10">
               <div className="max-w-3xl">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="h-[1px] w-4 bg-blue-600 animate-pulse" />
-                  <span className="text-[9px] font-black text-blue-600 uppercase tracking-[0.4em]">Premium Hardware</span>
+                  <span className="h-[1px] w-4 bg-indigo-600 animate-pulse" />
+                  <span className="text-[9px] font-black text-indigo-600 uppercase tracking-[0.4em]">Premium Hardware</span>
                 </div>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tighter uppercase leading-[0.85]">
                   <span className="block mb-2">THE</span>
@@ -57,8 +57,8 @@ export default function TheVault({ products = [] }) {
               
               <div className="flex items-center gap-3 bg-slate-50 p-2 rounded-2xl border border-slate-100 shadow-sm mb-2">
                  <div className="flex gap-2">
-                    <CarouselPrevious className="static translate-y-0 h-12 w-12 rounded-xl bg-white border border-slate-100 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-500 shadow-sm" />
-                    <CarouselNext className="static translate-y-0 h-12 w-12 rounded-xl bg-white border border-slate-100 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-500 shadow-sm" />
+                    <CarouselPrevious className="static translate-y-0 h-12 w-12 rounded-xl bg-white border border-slate-100 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all duration-500 shadow-sm" />
+                    <CarouselNext className="static translate-y-0 h-12 w-12 rounded-xl bg-white border border-slate-100 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all duration-500 shadow-sm" />
                  </div>
               </div>
             </div>
@@ -82,14 +82,14 @@ export default function TheVault({ products = [] }) {
                     
                     <div className="flex-1 flex flex-col pt-2">
                       <div className="flex items-center gap-2 mb-3">
-                         <Box size={12} className="text-blue-600" />
+                         <Box size={12} className="text-indigo-600" />
                          <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">{p.brand_name || 'Authorized'}</span>
                       </div>
-                      <h4 className="text-[15px] font-black text-slate-900 uppercase tracking-tighter line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors mb-2">{p.name}</h4>
+                      <h4 className="text-[15px] font-black text-slate-900 uppercase tracking-tighter line-clamp-2 leading-tight group-hover:text-indigo-600 transition-colors mb-2">{p.name}</h4>
                       
                       <div className="mt-auto flex items-center justify-between">
                          <p className="text-2xl font-black text-slate-900 tracking-tighter">${p.price}</p>
-                         <div className="h-12 w-12 rounded-2xl bg-white border border-slate-100 text-slate-900 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-500 shadow-sm">
+                         <div className="h-12 w-12 rounded-2xl bg-white border border-slate-100 text-slate-900 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600 transition-all duration-500 shadow-sm">
                             <ArrowUpRight size={20} />
                          </div>
                       </div>
@@ -102,9 +102,9 @@ export default function TheVault({ products = [] }) {
         </div>
 
         <div className="mt-20 flex justify-center">
-           <Link to="/shop" className="group flex items-center gap-4 text-[11px] font-black text-slate-900 uppercase tracking-[0.3em] hover:text-blue-600 transition-colors">
+           <Link to="/shop" className="group flex items-center gap-4 text-[11px] font-black text-slate-900 uppercase tracking-[0.3em] hover:text-indigo-600 transition-colors">
               Access Complete Archive
-              <div className="h-12 w-12 rounded-full border border-slate-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-500">
+              <div className="h-12 w-12 rounded-full border border-slate-100 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600 transition-all duration-500">
                 <ArrowRight size={18} />
               </div>
            </Link>

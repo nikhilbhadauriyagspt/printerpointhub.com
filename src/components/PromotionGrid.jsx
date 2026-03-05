@@ -22,7 +22,7 @@ export default function PromotionGrid() {
               key={promo.id}
               whileHover={{ y: -8 }}
               transition={{ duration: 0.4 }}
-              className="relative group overflow-hidden rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all"
+              className="relative group overflow-hidden rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10 transition-all"
             >
               <Link to={promo.link}>
                 <img 

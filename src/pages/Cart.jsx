@@ -18,7 +18,7 @@ export default function Cart() {
         </div>
         <h2 className="text-4xl font-black text-slate-900 uppercase tracking-tighter mb-4">Cart Empty</h2>
         <p className="text-slate-400 font-bold uppercase tracking-widest text-[10px] mb-12">Your selection awaits initialization.</p>
-        <Link to="/shop" className="h-16 px-12 bg-slate-900 text-white text-[10px] font-black uppercase tracking-[0.3em] rounded-full flex items-center gap-4 hover:bg-blue-600 transition-all shadow-xl hover:shadow-blue-600/20 group">
+        <Link to="/shop" className="h-16 px-12 bg-slate-900 text-white text-[10px] font-black uppercase tracking-[0.3em] rounded-full flex items-center gap-4 hover:bg-indigo-600 transition-all shadow-xl hover:shadow-indigo-600/20 group">
           Access Catalog <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
         </Link>
       </div>
@@ -33,8 +33,8 @@ export default function Cart() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8 border-b border-slate-100 pb-10">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <span className="h-[1px] w-6 bg-blue-600 animate-pulse" />
-              <span className="text-[10px] font-black tracking-[0.4em] uppercase text-blue-600">Current Selection</span>
+              <span className="h-[1px] w-6 bg-indigo-600 animate-pulse" />
+              <span className="text-[10px] font-black tracking-[0.4em] uppercase text-indigo-600">Current Selection</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 tracking-tighter uppercase leading-[0.85]">
               Shopping <span className="text-transparent stroke-text-light">Bag.</span>
@@ -61,7 +61,7 @@ export default function Cart() {
                   className="bg-white rounded-[2.5rem] border border-slate-100 p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-8 group hover:border-blue-100 hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] transition-all duration-500"
                 >
                   <div className="h-32 w-32 sm:h-40 sm:w-40 rounded-[1.5rem] bg-slate-50 p-6 flex items-center justify-center flex-shrink-0 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <img 
                       src={item.images ? `${(typeof item.images === 'string' ? JSON.parse(item.images)[0] : item.images[0])}` : ''} 
                       alt={item.name}
@@ -72,14 +72,14 @@ export default function Cart() {
 
                   <div className="flex-1 min-w-0 w-full sm:w-auto text-center sm:text-left">
                     <div className="flex flex-col mb-6">
-                      <span className="text-[9px] font-black text-blue-600 uppercase tracking-[0.3em] mb-2">{item.brand_name || 'Authorized'}</span>
+                      <span className="text-[9px] font-black text-indigo-600 uppercase tracking-[0.3em] mb-2">{item.brand_name || 'Authorized'}</span>
                       <h3 className="text-xl font-black text-slate-900 uppercase tracking-tight leading-tight line-clamp-2">{item.name}</h3>
                     </div>
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
                       <div className="h-12 px-2 bg-slate-50 rounded-xl border border-slate-100 flex items-center gap-2">
-                        <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="h-8 w-8 flex items-center justify-center hover:bg-white hover:text-blue-600 rounded-lg transition-all"><Minus size={14} /></button>
+                        <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="h-8 w-8 flex items-center justify-center hover:bg-white hover:text-indigo-600 rounded-lg transition-all"><Minus size={14} /></button>
                         <span className="text-xs font-black w-8 text-center text-slate-900">{item.quantity}</span>
-                        <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="h-8 w-8 flex items-center justify-center hover:bg-white hover:text-blue-600 rounded-lg transition-all"><Plus size={14} /></button>
+                        <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="h-8 w-8 flex items-center justify-center hover:bg-white hover:text-indigo-600 rounded-lg transition-all"><Plus size={14} /></button>
                       </div>
                       <span className="text-2xl font-black text-slate-900 tracking-tighter">${item.price * item.quantity}</span>
                     </div>
@@ -95,8 +95,8 @@ export default function Cart() {
               ))}
             </AnimatePresence>
 
-            <Link to="/shop" className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 hover:text-blue-600 transition-colors pt-8 pl-4 group">
-              <div className="h-8 w-8 rounded-full border border-slate-200 flex items-center justify-center group-hover:border-blue-600 transition-colors">
+            <Link to="/shop" className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 hover:text-indigo-600 transition-colors pt-8 pl-4 group">
+              <div className="h-8 w-8 rounded-full border border-slate-200 flex items-center justify-center group-hover:border-indigo-600 transition-colors">
                  <ChevronLeft size={14} />
               </div>
               Continue Browsing
@@ -107,8 +107,8 @@ export default function Cart() {
           <div className="lg:col-span-4">
             <div className="bg-slate-950 rounded-[3rem] p-10 lg:p-12 text-white sticky top-32 shadow-2xl shadow-slate-900/20">
               <div className="flex items-center justify-between mb-10">
-                 <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-500">Order Summary</h3>
-                 <div className="h-1.5 w-1.5 rounded-full bg-blue-500 animate-pulse" />
+                 <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-indigo-500">Order Summary</h3>
+                 <div className="h-1.5 w-1.5 rounded-full bg-indigo-500 animate-pulse" />
               </div>
               
               <div className="space-y-6 mb-12">
@@ -128,7 +128,7 @@ export default function Cart() {
 
               <Link 
                 to="/checkout"
-                className="w-full h-20 bg-blue-600 hover:bg-white hover:text-slate-950 text-white rounded-[1.5rem] flex items-center justify-center gap-4 text-[11px] font-black uppercase tracking-[0.3em] transition-all shadow-xl active:scale-[0.98] group"
+                className="w-full h-20 bg-indigo-600 hover:bg-white hover:text-slate-950 text-white rounded-[1.5rem] flex items-center justify-center gap-4 text-[11px] font-black uppercase tracking-[0.3em] transition-all shadow-xl active:scale-[0.98] group"
               >
                 Secure Checkout
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

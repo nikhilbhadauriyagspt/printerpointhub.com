@@ -88,7 +88,7 @@ export default function ProductDetail() {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
-        <Loader2 className="animate-spin h-12 w-12 text-blue-600 mb-6" />
+        <Loader2 className="animate-spin h-12 w-12 text-indigo-600 mb-6" />
         <p className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-300">Retrieving Specs</p>
       </div>
     );
@@ -116,9 +116,9 @@ export default function ProductDetail() {
         
         {/* Breadcrumbs */}
         <nav className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 mb-12">
-          <Link to="/" className="hover:text-blue-600 transition-colors">Home</Link>
+          <Link to="/" className="hover:text-indigo-600 transition-colors">Home</Link>
           <ChevronRight size={10} />
-          <Link to="/shop" className="hover:text-blue-600 transition-colors">Catalog</Link>
+          <Link to="/shop" className="hover:text-indigo-600 transition-colors">Catalog</Link>
           <ChevronRight size={10} />
           <span className="text-slate-900 truncate max-w-[200px]">{product.name}</span>
         </nav>
@@ -151,7 +151,7 @@ export default function ProductDetail() {
                   <button 
                     key={idx}
                     onClick={() => setActiveImage(idx)}
-                    className={`h-24 w-24 rounded-2xl border-2 flex-shrink-0 flex items-center justify-center p-4 transition-all ${activeImage === idx ? 'border-blue-600 bg-blue-50/50' : 'border-gray-100 hover:border-gray-300'}`}
+                    className={`h-24 w-24 rounded-2xl border-2 flex-shrink-0 flex items-center justify-center p-4 transition-all ${activeImage === idx ? 'border-indigo-600 bg-indigo-50/50' : 'border-gray-100 hover:border-gray-300'}`}
                   >
                     <img src={img} alt="" className="max-w-full max-h-full object-contain mix-blend-multiply" />
                   </button>
@@ -163,7 +163,7 @@ export default function ProductDetail() {
           {/* Product Info */}
           <div className="flex flex-col">
             <div className="mb-8">
-              <span className="inline-block px-4 py-1.5 bg-blue-600 text-white text-[9px] font-black uppercase tracking-[0.2em] rounded-full mb-6">
+              <span className="inline-block px-4 py-1.5 bg-indigo-600 text-white text-[9px] font-black uppercase tracking-[0.2em] rounded-full mb-6">
                 {product.brand_name || 'Premium Listing'}
               </span>
               <h1 className="text-4xl md:text-5xl font-black text-slate-900 leading-[1.1] tracking-tighter uppercase mb-6">
@@ -185,7 +185,7 @@ export default function ProductDetail() {
               </div>
 
               {product.description && (
-                <p className="text-slate-500 font-medium leading-relaxed text-lg mb-10 border-l-4 border-blue-600 pl-6">
+                <p className="text-slate-500 font-medium leading-relaxed text-lg mb-10 border-l-4 border-indigo-600 pl-6">
                   {product.description}
                 </p>
               )}
@@ -213,7 +213,7 @@ export default function ProductDetail() {
                 <button 
                   onClick={handleAddToCart}
                   disabled={isAdded}
-                  className={`flex-grow h-16 rounded-2xl flex items-center justify-center gap-3 text-xs font-black uppercase tracking-[0.2em] transition-all shadow-2xl active:scale-[0.98] ${isAdded ? 'bg-emerald-500 text-white' : 'bg-blue-600 text-white hover:bg-slate-900 shadow-blue-600/20'}`}
+                  className={`flex-grow h-16 rounded-2xl flex items-center justify-center gap-3 text-xs font-black uppercase tracking-[0.2em] transition-all shadow-2xl active:scale-[0.98] ${isAdded ? 'bg-emerald-500 text-white' : 'bg-indigo-600 text-white hover:bg-slate-900 shadow-indigo-600/20'}`}
                 >
                   {isAdded ? (
                     <><CheckCircle size={20} /> Added to Cart</>
@@ -222,7 +222,7 @@ export default function ProductDetail() {
                   )}
                 </button>
                 
-                <button className="h-16 w-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center hover:bg-blue-600 transition-all shadow-xl">
+                <button className="h-16 w-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center hover:bg-indigo-600 transition-all shadow-xl">
                   <Share2 size={20} />
                 </button>
               </div>
@@ -257,10 +257,10 @@ export default function ProductDetail() {
           <div className="mt-32 border-t border-gray-100 pt-20">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
               <div className="space-y-2">
-                <h2 className="text-[10px] font-black text-blue-600 uppercase tracking-[0.4em]">Personalized for you</h2>
+                <h2 className="text-[10px] font-black text-indigo-600 uppercase tracking-[0.4em]">Personalized for you</h2>
                 <h3 className="text-4xl font-black text-slate-900 tracking-tighter uppercase">Related <span className="text-slate-300">Discoveries.</span></h3>
               </div>
-              <Link to="/shop" className="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-blue-600 transition-colors flex items-center gap-2">
+              <Link to="/shop" className="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-indigo-600 transition-colors flex items-center gap-2">
                 Explore Full Catalog <ChevronRight size={12} />
               </Link>
             </div>
@@ -273,17 +273,17 @@ export default function ProductDetail() {
                   className="group"
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  <div className="aspect-square bg-gray-50 rounded-[2rem] border border-gray-100 group-hover:border-blue-500/20 transition-all duration-500 flex items-center justify-center p-8 overflow-hidden mb-4 relative">
+                  <div className="aspect-square bg-gray-50 rounded-[2rem] border border-gray-100 group-hover:border-indigo-500/20 transition-all duration-500 flex items-center justify-center p-8 overflow-hidden mb-4 relative">
                     <img 
                       src={getImagePath(p.images)} 
                       alt={p.name}
                       className="max-w-full max-h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute inset-0 bg-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <div className="px-1">
-                    <p className="text-[8px] font-black text-blue-600 uppercase tracking-widest mb-1">{p.brand_name}</p>
-                    <h4 className="text-[11px] font-bold text-slate-800 group-hover:text-blue-600 transition-colors uppercase tracking-tight line-clamp-1 mb-2">{p.name}</h4>
+                    <p className="text-[8px] font-black text-indigo-600 uppercase tracking-widest mb-1">{p.brand_name}</p>
+                    <h4 className="text-[11px] font-bold text-slate-800 group-hover:text-indigo-600 transition-colors uppercase tracking-tight line-clamp-1 mb-2">{p.name}</h4>
                     <span className="text-sm font-black text-slate-900">${p.price}</span>
                   </div>
                 </Link>

@@ -8,7 +8,7 @@ const exclusiveProducts = [
     desc: "The ultimate monochrome workhorse. Engineered for 60ppm output and high-fidelity archival grade printing.",
     price: "$1,899",
     image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=1000&auto=format&fit=crop",
-    accent: "from-blue-600 to-indigo-600"
+    accent: "from-indigo-600 to-indigo-600"
   },
   {
     name: "Precision Color G1",
@@ -29,7 +29,7 @@ export default function ExclusiveShowcase() {
           Exclusive
         </span>
         <div className="relative z-10">
-          <span className="text-blue-600 font-black text-xs tracking-[0.4em] uppercase block mb-2 ml-1">Limited Edition</span>
+          <span className="text-indigo-600 font-black text-xs tracking-[0.4em] uppercase block mb-2 ml-1">Limited Edition</span>
           <h2 className="text-5xl font-black text-slate-900 tracking-tighter uppercase">
             The <span className="italic">Elite</span> Series.
           </h2>
@@ -43,7 +43,7 @@ export default function ExclusiveShowcase() {
             initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col lg:flex-row items-center gap-10 bg-gray-50/50 rounded-[3rem] border border-gray-100 p-8 lg:p-12 hover:bg-white hover:border-blue-500/20 transition-all duration-700"
+            className="flex flex-col lg:flex-row items-center gap-10 bg-gray-50/50 rounded-[3rem] border border-gray-100 p-8 lg:p-12 hover:bg-white hover:border-indigo-500/20 transition-all duration-700"
           >
             {/* Image Side */}
             <div className="w-full lg:w-1/2 aspect-video overflow-hidden rounded-[2.5rem] bg-white shadow-sm border border-gray-100">
@@ -64,7 +64,7 @@ export default function ExclusiveShowcase() {
               </div>
 
               <div className="flex items-center gap-4 w-full sm:w-auto">
-                <Button size="xl" className="flex-1 sm:flex-none bg-black hover:bg-blue-600 text-white rounded-2xl px-10 h-14 font-black text-xs tracking-widest shadow-xl transition-all">
+                <Button size="xl" className="flex-1 sm:flex-none bg-black hover:bg-indigo-600 text-white rounded-2xl px-10 h-14 font-black text-xs tracking-widest shadow-xl transition-all">
                   ORDER NOW <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
                 <button className="h-14 w-14 rounded-2xl border border-gray-200 flex items-center justify-center hover:bg-gray-100 transition-colors">

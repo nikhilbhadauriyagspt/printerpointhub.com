@@ -8,7 +8,7 @@ const products = [
     tag: "Most Popular",
     price: "$999",
     image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=400",
-    color: "bg-blue-50/50"
+    color: "bg-indigo-50/50"
   },
   {
     name: "Blade Pro 16",
@@ -37,7 +37,7 @@ export default function TrendingProducts() {
   return (
     <section className="px-6 md:px-10 lg:px-12 py-12 bg-white font-urbanist">
       <div className="flex items-center justify-between mb-10">
-        <h3 className="text-2xl font-black tracking-tighter uppercase">Trending <span className="text-blue-600">Now.</span></h3>
+        <h3 className="text-2xl font-black tracking-tighter uppercase">Trending <span className="text-indigo-600">Now.</span></h3>
         <Link to="#" className="text-xs font-black text-slate-400 hover:text-black transition-colors uppercase tracking-widest flex items-center gap-2 group">
           Explore All <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
         </Link>
@@ -67,7 +67,7 @@ export default function TrendingProducts() {
               <div>
                 <h4 className="font-black text-slate-900 text-sm tracking-tight">{p.name}</h4>
                 <div className="flex items-center gap-3 mt-1">
-                  <span className="text-blue-600 font-black text-sm">{p.price}</span>
+                  <span className="text-indigo-600 font-black text-sm">{p.price}</span>
                   <div className="flex items-center gap-1 text-amber-400">
                     <Star size={10} fill="currentColor" />
                     <span className="text-[10px] font-bold text-slate-400">4.9</span>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, ChevronLeft, ChevronRight, Box } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
@@ -27,82 +27,77 @@ export default function ShopByCategory({ categories = [] }) {
   };
 
   return (
-    <section className="px-6 md:px-10 lg:px-16 py-16 lg:py-24 bg-white font-urbanist relative overflow-hidden border-b border-slate-50">
+    <section className="px-6 md:px-10 lg:px-20 py-20 lg:py-32 bg-white font-urbanist relative overflow-hidden">
       
       <div className="max-w-[1920px] mx-auto relative z-10">
-        {/* --- HERO MATCHED SECTION HEADER --- */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-10">
+        {/* --- HEADER --- */}
+        <div className="flex flex-col items-center text-center mb-16 gap-8">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="h-[1px] w-4 bg-blue-600 animate-pulse" />
-              <span className="text-[9px] font-black text-blue-600 uppercase tracking-[0.4em]">Premium Selection</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tighter uppercase leading-[0.85]">
-              <span className="block mb-2">SHOP BY</span>
-              <span className="text-transparent stroke-text-light">CATEGORY.</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
+              Shop By <span className="text-indigo-600">Category.</span>
             </h2>
           </div>
           
-          <div className="flex items-center gap-3 bg-slate-50 p-2 rounded-2xl border border-slate-100 shadow-sm mb-2">
-             <button className="swiper-prev-btn h-12 w-12 rounded-xl bg-white border border-slate-100 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-500 group shadow-sm">
-                <ChevronLeft size={20} className="group-hover:-translate-x-0.5 transition-transform" />
+          <div className="flex items-center gap-3">
+             <button className="swiper-prev-btn h-14 w-14 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-all duration-300 group shadow-sm">
+                <ChevronLeft size={24} className="group-hover:-translate-x-1 transition-transform" />
              </button>
-             <button className="swiper-next-btn h-12 w-12 rounded-xl bg-white border border-slate-100 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-500 group shadow-sm">
-                <ChevronRight size={20} className="group-hover:translate-x-0.5 transition-transform" />
+             <button className="swiper-next-btn h-14 w-14 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-all duration-300 group shadow-sm">
+                <ChevronRight size={24} className="group-hover:translate-x-1 transition-transform" />
              </button>
           </div>
         </div>
 
-        {/* --- COMPACT PREMIUM CAROUSEL --- */}
+        {/* --- CAROUSEL --- */}
         <div className="relative">
           <Swiper
             modules={[Navigation, Autoplay]}
-            spaceBetween={20}
-            slidesPerView={1.4}
+            spaceBetween={24}
+            slidesPerView={1.2}
             navigation={{
               prevEl: '.swiper-prev-btn',
               nextEl: '.swiper-next-btn',
             }}
             autoplay={{ delay: 5000, disableOnInteraction: false }}
             breakpoints={{
-              640: { slidesPerView: 2.5 },
-              1024: { slidesPerView: 4 },
-              1440: { slidesPerView: 5.2 },
+              640: { slidesPerView: 2.2 },
+              1024: { slidesPerView: 3.5 },
+              1440: { slidesPerView: 5 },
             }}
             className="!overflow-visible"
           >
             {subcategories.map((item, i) => (
-              <SwiperSlide key={item.id} className="h-full py-2">
+              <SwiperSlide key={item.id} className="h-full py-4">
                 <Link to={`/shop?category=${item.slug}`} className="block h-full group">
                   <motion.div
-                    className="relative flex flex-col bg-slate-50/50 rounded-[2rem] border border-slate-100 transition-all duration-500 h-[380px] overflow-hidden hover:bg-white hover:border-blue-200 hover:shadow-[0_30px_60px_rgba(0,0,0,0.04)]"
+                    className="relative flex flex-col bg-[#F8FAFC] rounded-[2.5rem] transition-all duration-500 h-[400px] overflow-hidden hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-transparent hover:border-slate-100"
                   >
                     {/* Image Area */}
-                    <div className="relative flex-1 flex items-center justify-center p-8">
+                    <div className="relative flex-1 flex items-center justify-center p-8 mt-4">
                       <motion.div 
-                        whileHover={{ scale: 1.08 }}
-                        transition={{ type: "spring", stiffness: 300 }}
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
                         className="relative z-10 w-full h-full flex items-center justify-center"
                       >
                         <img 
                           src={getImagePath(item.image)} 
                           alt={item.name}
-                          className="max-w-[80%] max-h-[80%] object-contain mix-blend-multiply transition-all duration-500 group-hover:drop-shadow-[0_15px_30px_rgba(0,0,0,0.08)]"
+                          className="max-w-[85%] max-h-[85%] object-contain mix-blend-multiply transition-all duration-500 group-hover:drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
                           onError={(e) => { e.target.src = "https://via.placeholder.com/400x400?text=" + item.name; }}
                         />
                       </motion.div>
                     </div>
 
-                    {/* Compact Info Footer */}
-                    <div className="p-6 pt-0 text-center">
-                      <h3 className="text-lg font-black text-slate-900 uppercase tracking-tight truncate mb-1">
+                    {/* Info Footer */}
+                    <div className="p-8 pt-0 flex flex-col items-center text-center">
+                      <h3 className="text-xl font-black text-slate-900 tracking-tight mb-2 group-hover:text-indigo-600 transition-colors">
                         {item.name}
                       </h3>
-                      <div className="flex items-center justify-center gap-2">
-                        <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest group-hover:text-blue-600 transition-colors">
-                          Browse Series
+                      <div className="inline-flex items-center justify-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-100 group-hover:border-indigo-100 group-hover:bg-indigo-50 transition-all">
+                        <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest group-hover:text-indigo-600">
+                          Explore
                         </span>
-                        <ArrowUpRight size={12} className="text-slate-300 group-hover:text-blue-600 transition-all" />
+                        <ArrowUpRight size={14} className="text-slate-400 group-hover:text-indigo-600" />
                       </div>
                     </div>
                   </motion.div>
@@ -111,14 +106,6 @@ export default function ShopByCategory({ categories = [] }) {
             ))}
           </Swiper>
         </div>
-
-        {/* Global Styles for Stroke Text */}
-        <style>{`
-          .stroke-text-light {
-            -webkit-text-stroke: 2px #0f172a;
-            color: transparent;
-          }
-        `}</style>
       </div>
     </section>
   );

@@ -14,7 +14,7 @@ export default function Dashboard() {
   }, []);
 
   const cards = [
-    { title: "Total Products", value: stats.products, icon: Package, color: "bg-blue-500" },
+    { title: "Total Products", value: stats.products, icon: Package, color: "bg-indigo-500" },
     { title: "Active Users", value: stats.users, icon: Users, color: "bg-emerald-500" },
     { title: "Total Brands", value: stats.brands, icon: ShoppingCart, color: "bg-purple-500" },
     { title: "Low Stock", value: stats.low_stock, icon: AlertTriangle, color: "bg-orange-500" },
@@ -31,7 +31,7 @@ export default function Dashboard() {
               <p className="text-slate-500 text-xs font-bold uppercase tracking-wider mb-1">{card.title}</p>
               <h3 className="text-3xl font-black text-slate-900">{card.value}</h3>
             </div>
-            <div className={`h-12 w-12 rounded-xl ${card.color} text-white flex items-center justify-center shadow-lg shadow-blue-500/10`}>
+            <div className={`h-12 w-12 rounded-xl ${card.color} text-white flex items-center justify-center shadow-lg shadow-indigo-500/10`}>
               <card.icon size={24} />
             </div>
           </div>

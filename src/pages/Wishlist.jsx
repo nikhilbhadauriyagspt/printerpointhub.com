@@ -21,7 +21,7 @@ export default function Wishlist() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center pt-20 px-6 font-urbanist bg-white relative overflow-hidden">
         {/* Background Ambient Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500/5 blur-[120px] rounded-full pointer-events-none" />
         
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
@@ -33,7 +33,7 @@ export default function Wishlist() {
           </div>
           <h2 className="text-4xl font-black text-slate-900 uppercase tracking-tighter mb-4">Wishlist Empty.</h2>
           <p className="text-slate-400 font-bold uppercase tracking-[0.2em] text-[10px] mb-12 max-w-xs mx-auto leading-relaxed">Your professional curation is awaiting its first acquisition.</p>
-          <Link to="/shop" className="h-16 px-12 bg-slate-900 text-white rounded-full font-black text-xs uppercase tracking-[0.3em] hover:bg-blue-600 transition-all shadow-2xl flex items-center gap-4 mx-auto w-fit">
+          <Link to="/shop" className="h-16 px-12 bg-slate-900 text-white rounded-full font-black text-xs uppercase tracking-[0.3em] hover:bg-indigo-600 transition-all shadow-2xl flex items-center gap-4 mx-auto w-fit">
             INITIALIZE DISCOVERY <ArrowRight size={18} />
           </Link>
         </motion.div>
@@ -132,11 +132,11 @@ export default function Wishlist() {
           </Link>
           <div className="flex items-center gap-10 opacity-60">
              <div className="flex items-center gap-3">
-                <ShieldCheck size={18} className="text-blue-600" />
+                <ShieldCheck size={18} className="text-indigo-600" />
                 <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Authorized Listings</span>
              </div>
              <div className="flex items-center gap-3">
-                <Sparkles size={18} className="text-blue-600" />
+                <Sparkles size={18} className="text-indigo-600" />
                 <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Global Support</span>
              </div>
           </div>

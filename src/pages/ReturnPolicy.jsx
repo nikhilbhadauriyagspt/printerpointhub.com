@@ -6,7 +6,7 @@ export default function ReturnPolicy() {
     <PolicyLayout
       title="Return Policy"
       subtitle="Read our return and refund policy for your purchases."
-      lastUpdated="February 23, 2026"
+      lastUpdated="March 6, 2026"
     >
       <h2>RETURNS</h2>
       <p>
@@ -15,16 +15,15 @@ export default function ReturnPolicy() {
 
       <h2>RETURN PROCESS</h2>
       <p>
-                 To return an item, please email customer service at <a href="mailto:info@easymyprint.shop">info@easymyprint.shop</a> to obtain an Return Merchandise Authorization (RMA) number.      </p>
+                 To return an item, please email customer service at <a href="mailto:info@printerpointhub.com">info@printerpointhub.com</a> to obtain an Return Merchandise Authorization (RMA) number.      </p>
       <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 mt-6 not-prose">
         <p className="font-medium text-slate-700 mb-4 italic">After receiving an RMA number, place the item securely in its original packaging and include your proof of purchase, then mail your return to the following address:</p>
         <address className="not-italic text-slate-900 font-black leading-relaxed uppercase tracking-tighter">
-                     EASYMYPRINT LLC<br />          Attn: Returns<br />
-          RMA #<br />
-                     722 N West St<br />
+                     PRINTER POINT HUB <br />
+                     500 W Peace St<br />
                      Raleigh, NC 27603<br />          United States
         </address>
-        <p className="mt-6 text-blue-600 font-black uppercase text-xs tracking-widest">
+        <p className="mt-6 text-indigo-600 font-black uppercase text-xs tracking-widest">
           Return shipping charges will be paid or reimbursed by us.
         </p>
       </div>
@@ -44,7 +43,7 @@ export default function ReturnPolicy() {
       <p>If you have any questions concerning our return policy, please contact us at:</p>
       <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 my-8 not-prose">
         <address className="not-italic text-slate-700 font-bold leading-relaxed space-y-3">
-                     <p className="flex items-center gap-3 text-blue-600 font-black tracking-tight">info@easymyprint.shop</p>          <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.2em]">Contact support for immediate assistance</p>
+                     <p className="flex items-center gap-3 text-indigo-600 font-black tracking-tight">info@printerpointhub.com</p>          <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.2em]">Contact support for immediate assistance</p>
         </address>
       </div>
     </PolicyLayout>

@@ -7,10 +7,10 @@ export default function CookiePolicy() {
     <PolicyLayout
       title="Cookie Policy"
       subtitle="This Cookie Policy explains how we use cookies and similar technologies."
-      lastUpdated="February 23, 2026"
+      lastUpdated="March 6, 2026"
     >
       <p className="lead">
-        This Cookie Policy explains how EASYMYPRINT LLC ("Company," "we," "us," or "our") uses cookies and similar technologies when you visit our website: <a href="https://easymyprint.shop/">https://easymyprint.shop/</a>
+        This Cookie Policy explains how PRINTER POINT HUB  ("Company," "we," "us," or "our") uses cookies and similar technologies when you visit our website: <a href="https://printerpointhub.com/">https://printerpointhub.com/</a>
       </p>
       <p>
         This Cookie Policy should be read together with our <Link to="/privacy-policy">Privacy Policy</Link> and <Link to="/terms-and-conditions">Terms and Conditions</Link>.
@@ -138,8 +138,8 @@ export default function CookiePolicy() {
         We do not sell personal information. If cookies are considered “sharing” under certain US state privacy laws (such as targeted advertising), you may exercise your rights by:
       </p>
       <ul>
-        <li>Emailing: <a href="mailto:info@easymyprint.shop">info@easymyprint.shop</a></li>
-        <li>Visiting: <Link to="/contact">https://easymyprint.shop/contact</Link></li>
+        <li>Emailing: <a href="mailto:info@printerpointhub.com">info@printerpointhub.com</a></li>
+        <li>Visiting: <Link to="/contact">https://printerpointhub.com/contact</Link></li>
       </ul>
 
       <h2>9. CHILDREN’S PRIVACY</h2>
@@ -155,12 +155,12 @@ export default function CookiePolicy() {
       <p>If you have any questions regarding this Cookie Policy, please contact:</p>
       <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 my-8 not-prose">
         <address className="not-italic text-slate-700 font-bold leading-relaxed space-y-2 uppercase tracking-tighter">
-          <p className="text-slate-900 font-black">EASYMYPRINT LLC</p>
+          <p className="text-slate-900 font-black">PRINTER POINT HUB </p>
           <p>Authorised HP Partner</p>
-          <p>722 N West St</p>
+          <p>500 W Peace St</p>
           <p>Raleigh, NC 27603</p>
           <p>United States</p>
-          <p className="pt-4 text-blue-600 font-black lowercase">info@easymyprint.shop</p>
+          <p className="pt-4 text-indigo-600 font-black lowercase">info@printerpointhub.com</p>
         </address>
       </div>
     </PolicyLayout>

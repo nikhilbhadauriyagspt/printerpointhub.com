@@ -44,7 +44,7 @@ export default function UserLogin() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-white font-urbanist px-6 py-20 relative overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-[40%] h-[40%] bg-blue-50/50 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[40%] h-[40%] bg-indigo-50/50 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[30%] h-[30%] bg-slate-100/50 blur-[100px] rounded-full pointer-events-none" />
       
       <div className="max-w-md w-full relative z-10">
@@ -53,7 +53,7 @@ export default function UserLogin() {
         <div className="text-center mb-12">
           <Link to="/" className="inline-block mb-10 transition-transform hover:scale-105 group">
             <div className="flex items-center gap-4">
-              <img src="/logo/EASYMYPRINT.png" alt="EASYMYPRINT" className="h-10 w-auto object-contain" />
+              <img src="/logo/EASYMYPRINT.png" alt="PRINTER POINT HUB" className="h-10 w-auto object-contain" />
               <div className="h-8 w-px bg-slate-200" />
               <div className="flex flex-col items-start leading-none">
                 <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest">A Subsidiary of</span>
@@ -62,8 +62,8 @@ export default function UserLogin() {
             </div>
           </Link>
           <div className="flex items-center justify-center gap-2 mb-6">
-             <span className="h-[1px] w-6 bg-blue-600 animate-pulse" />
-             <span className="text-[9px] font-black text-blue-600 uppercase tracking-[0.4em]">Secure Access Hub</span>
+             <span className="h-[1px] w-6 bg-indigo-600 animate-pulse" />
+             <span className="text-[9px] font-black text-indigo-600 uppercase tracking-[0.4em]">Secure Access Hub</span>
           </div>
           <h1 className="text-4xl font-black text-slate-900 uppercase tracking-tighter mb-2 leading-none">Welcome Back.</h1>
           <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Authorized Access Only</p>
@@ -93,11 +93,11 @@ export default function UserLogin() {
               <div className="space-y-3">
                 <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2">Email Address</label>
                 <div className="relative group">
-                  <Mail className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-300 group-focus-within:text-blue-600 transition-colors" size={20} strokeWidth={2} />
+                  <Mail className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-300 group-focus-within:text-indigo-600 transition-colors" size={20} strokeWidth={2} />
                   <input 
                     required type="email" placeholder="NAME@DOMAIN.COM" value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full h-16 pl-16 pr-6 bg-slate-50 border border-slate-100 rounded-2xl focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 outline-none text-xs font-bold uppercase transition-all shadow-inner"
+                    className="w-full h-16 pl-16 pr-6 bg-slate-50 border border-slate-100 rounded-2xl focus:bg-white focus:border-indigo-600 focus:ring-4 focus:ring-indigo-600/5 outline-none text-xs font-bold uppercase transition-all shadow-inner"
                   />
                 </div>
               </div>
@@ -105,14 +105,14 @@ export default function UserLogin() {
               <div className="space-y-3">
                 <div className="flex justify-between items-center px-2">
                   <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Password</label>
-                  <Link to="#" className="text-[9px] font-black text-blue-600 uppercase tracking-widest hover:underline">Forgot?</Link>
+                  <Link to="#" className="text-[9px] font-black text-indigo-600 uppercase tracking-widest hover:underline">Forgot?</Link>
                 </div>
                 <div className="relative group">
-                  <Lock className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-300 group-focus-within:text-blue-600 transition-colors" size={20} strokeWidth={2} />
+                  <Lock className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-300 group-focus-within:text-indigo-600 transition-colors" size={20} strokeWidth={2} />
                   <input 
                     required type={showPassword ? "text" : "password"} placeholder="••••••••" value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full h-16 pl-16 pr-16 bg-slate-50 border border-slate-100 rounded-2xl focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 outline-none text-xs font-bold uppercase transition-all shadow-inner"
+                    className="w-full h-16 pl-16 pr-16 bg-slate-50 border border-slate-100 rounded-2xl focus:bg-white focus:border-indigo-600 focus:ring-4 focus:ring-indigo-600/5 outline-none text-xs font-bold uppercase transition-all shadow-inner"
                   />
                   <button 
                     type="button" onClick={() => setShowPassword(!showPassword)}
@@ -128,7 +128,7 @@ export default function UserLogin() {
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
               disabled={loading}
-              className="w-full h-16 bg-slate-950 text-white rounded-2xl flex items-center justify-center gap-4 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-blue-600 transition-all shadow-[0_20px_50px_rgba(0,0,0,0.15)] disabled:opacity-50 group"
+              className="w-full h-16 bg-slate-950 text-white rounded-2xl flex items-center justify-center gap-4 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-indigo-600 transition-all shadow-[0_20px_50px_rgba(0,0,0,0.15)] disabled:opacity-50 group"
             >
               {loading ? <Loader2 className="animate-spin" size={20} /> : (
                 <>
@@ -142,22 +142,10 @@ export default function UserLogin() {
           <div className="mt-10 pt-10 border-t border-slate-50 text-center">
             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
               New to our network?
-              <Link to="/signup" className="text-blue-600 font-black hover:underline ml-2">Request Access</Link>
+              <Link to="/signup" className="text-indigo-600 font-black hover:underline ml-2">Request Access</Link>
             </p>
           </div>
         </motion.div>
-
-        {/* --- SYSTEM FOOTER --- */}
-        <div className="mt-16 flex flex-col items-center gap-6 opacity-30">
-           <div className="flex items-center gap-6">
-              <ShieldCheck size={18} className="text-slate-900" />
-              <div className="h-4 w-px bg-slate-300" />
-              <Globe size={18} className="text-slate-900" />
-           </div>
-           <p className="text-[8px] font-black text-slate-400 uppercase tracking-[0.4em] text-center leading-relaxed">
-             Authorized HP Partner Hub // Secure Deployment Center
-           </p>
-        </div>
       </div>
     </div>
   );

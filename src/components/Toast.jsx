@@ -21,12 +21,12 @@ export default function Toast() {
               initial={{ width: '100%' }}
               animate={{ width: '0%' }}
               transition={{ duration: 3, ease: 'linear' }}
-              className="absolute bottom-0 left-0 h-1 bg-blue-500"
+              className="absolute bottom-0 left-0 h-1 bg-indigo-500"
             />
 
             <div className={`h-10 w-10 rounded-xl flex items-center justify-center shrink-0 ${
               toast.type === 'success' ? 'bg-emerald-500/20 text-emerald-400' : 
-              toast.type === 'info' ? 'bg-blue-500/20 text-blue-400' : 'bg-red-500/20 text-red-400'
+              toast.type === 'info' ? 'bg-indigo-500/20 text-indigo-400' : 'bg-red-500/20 text-red-400'
             }`}>
               {toast.type === 'success' ? <CheckCircle size={20} /> : 
                toast.type === 'info' ? <Info size={20} /> : <XCircle size={20} />}

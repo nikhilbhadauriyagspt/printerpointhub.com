@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SEO from '@/components/SEO';
-import { Mail, Phone, MapPin, Send, MessageCircle, Clock, ShieldCheck, ArrowRight, Loader2, CheckCircle2, Terminal, Activity, Globe, Headphones, ChevronDown } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageCircle, Clock, ShieldCheck, ArrowRight, Loader2, CheckCircle2, Terminal, Activity, Globe, Headphones, ChevronDown, Zap } from 'lucide-react';
 import API_BASE_URL from '../config';
 import { cn } from '../lib/utils';
 
@@ -44,86 +44,66 @@ export default function Contact() {
   return (
     <div className="bg-white min-h-screen pt-32 pb-20 font-urbanist overflow-hidden">
       <SEO 
-        title="Contact Us | EASYMYPRINT" 
-        description="Get in touch with EASYMYPRINT for premium support, corporate inquiries, or product guidance. Our specialists are here to assist."
+        title="Contact Us | PRINTER POINT HUB" 
+        description="Get in touch with PRINTER POINT HUB for premium support, corporate inquiries, or product guidance. Our specialists are here to assist."
       />
       
-      {/* --- HERO MATCHED PAGE HEADER --- */}
-      <div className="max-w-[1920px] mx-auto px-6 md:px-10 lg:px-16 mb-24 relative overflow-hidden">
+      {/* --- PAGE HEADER --- */}
+      <div className="max-w-[1920px] mx-auto px-6 md:px-10 lg:px-20 mb-20 relative overflow-hidden text-center">
         {/* Background Decor */}
-        <div className="absolute top-0 right-0 w-[40%] h-full bg-blue-50/50 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[40%] h-full bg-indigo-50/50 blur-[120px] rounded-full pointer-events-none" />
         
-        <div className="relative z-10 flex flex-col items-center text-center">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <span className="h-[1px] w-6 bg-blue-600 animate-pulse" />
-            <span className="text-[9px] font-black text-blue-600 uppercase tracking-[0.4em]">Client Assistance</span>
-          </div>
+        <div className="relative z-10 flex flex-col items-center">
           
-          <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter uppercase leading-[0.85] mb-10">
-            <span className="block mb-2">GET IN</span>
-            <span className="text-transparent stroke-text-light">TOUCH.</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 tracking-tight leading-[1.1] mb-8 uppercase">
+            Get In <span className="text-indigo-600">Touch.</span>
           </h1>
           
-          <p className="text-slate-500 text-lg font-bold leading-relaxed max-w-2xl border-l-4 border-slate-100 pl-8">
+          <p className="text-slate-600 text-lg md:text-xl font-medium leading-relaxed max-w-2xl border-l-4 border-indigo-100 pl-6">
             Connect with our dedicated specialists for refined guidance on premium hardware and professional workspace configurations.
           </p>
         </div>
       </div>
 
-      <div className="max-w-[1920px] mx-auto px-6 md:px-10 lg:px-16">
+      <div className="max-w-[1920px] mx-auto px-6 md:px-10 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* --- CONTACT MODULES --- */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="p-10 bg-slate-50/50 border border-slate-100 hover:border-blue-100 transition-all duration-700 group relative overflow-hidden rounded-[2.5rem] hover:bg-white hover:shadow-[0_30px_60px_rgba(0,0,0,0.03)]">
-              <div className="h-14 w-14 bg-white rounded-2xl flex items-center justify-center mb-10 shadow-sm border border-slate-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+            <div className="p-8 bg-[#F8FAFC] border border-transparent hover:border-indigo-100 transition-all duration-500 group relative overflow-hidden rounded-[2.5rem] hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)]">
+              <div className="h-14 w-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm border border-slate-100 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600 transition-all duration-500">
                 <Mail size={24} strokeWidth={1.5} />
               </div>
-              <p className="text-[10px] font-black text-blue-600 uppercase tracking-[0.3em] mb-3">Email Inquiry</p>
-              <h4 className="text-xl font-black text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors">info@easymyprint.shop</h4>
-              <div className="mt-8 flex items-center gap-2 pt-6 border-t border-slate-100/50">
-                 <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                 <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Global Support Active</span>
-              </div>
+              <p className="text-[10px] font-black text-indigo-600 uppercase tracking-widest mb-2">Email Inquiry</p>
+              <h4 className="text-xl font-black text-slate-900 tracking-tight group-hover:text-indigo-600 transition-colors">info@printerpointhub.com</h4>
             </div>
 
-            <div className="p-10 bg-slate-50/50 border border-slate-100 hover:border-blue-100 transition-all duration-700 group relative overflow-hidden rounded-[2.5rem] hover:bg-white hover:shadow-[0_30px_60px_rgba(0,0,0,0.03)]">
-              <div className="h-14 w-14 bg-white rounded-2xl flex items-center justify-center mb-10 shadow-sm border border-slate-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+            <div className="p-8 bg-[#F8FAFC] border border-transparent hover:border-indigo-100 transition-all duration-500 group relative overflow-hidden rounded-[2.5rem] hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)]">
+              <div className="h-14 w-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm border border-slate-100 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600 transition-all duration-500">
                 <MapPin size={24} strokeWidth={1.5} />
               </div>
-              <p className="text-[10px] font-black text-blue-600 uppercase tracking-[0.3em] mb-3">Office Location</p>
-              <h4 className="text-xl font-black text-slate-900 uppercase tracking-tight leading-tight group-hover:text-blue-600 transition-colors">722 N West St <br/> Raleigh, NC 27603</h4>
+              <p className="text-[10px] font-black text-indigo-600 uppercase tracking-widest mb-2">Office Location</p>
+              <h4 className="text-xl font-black text-slate-900 uppercase tracking-tight leading-tight group-hover:text-indigo-600 transition-colors">500 W Peace St <br/> Raleigh, NC 27603, USA</h4>
             </div>
 
-            <div className="p-8 rounded-[2.5rem] bg-gradient-to-br from-white to-blue-50 border border-blue-100 relative overflow-hidden shadow-[0_30px_60px_rgba(37,99,235,0.04)] group transition-all duration-1000 hover:border-blue-600">
-              {/* Background Decor */}
-              <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
-                 <ShieldCheck size={100} strokeWidth={1} className="text-blue-600" />
+            <div className="p-8 rounded-[2.5rem] bg-indigo-600 text-white relative overflow-hidden shadow-2xl shadow-indigo-600/20 group transition-all duration-500">
+              <div className="absolute -right-10 -top-10 opacity-10 rotate-12">
+                 <ShieldCheck size={180} />
               </div>
               
-              <div className="relative z-10 flex flex-col items-center text-center">
-                {/* Logo Pedestal */}
-                <div className="h-20 w-20 bg-white rounded-2xl shadow-xl border border-blue-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-700 group-hover:rotate-3">
-                   <img src="/brands/hp.png" alt="HP" className="h-10 w-auto object-contain" />
+              <div className="relative z-10">
+                <div className="h-16 w-16 bg-white rounded-2xl shadow-xl flex items-center justify-center mb-6">
+                   <img src="/brands/hp.png" alt="HP" className="h-8 w-auto object-contain" />
                 </div>
                 
-                {/* Status Tag */}
-                <div className="flex items-center justify-center gap-2 mb-4">
-                   <span className="h-[1px] w-4 bg-blue-600 animate-pulse" />
-                   <span className="text-[9px] font-black text-blue-600 uppercase tracking-[0.4em]">Official Status</span>
-                   <span className="h-[1px] w-4 bg-blue-600 animate-pulse" />
-                </div>
-                
-                {/* Headings */}
-                <h4 className="text-xl font-black text-slate-900 uppercase tracking-tighter mb-3 leading-none">
-                  AUTHORIZED <br/> <span className="text-blue-600 italic">PARTNER.</span>
+                <p className="text-[10px] font-black text-indigo-200 uppercase tracking-widest mb-2">Partner Status</p>
+                <h4 className="text-2xl font-black text-white uppercase tracking-tight leading-none mb-6">
+                  AUTHORIZED <br/> HP PARTNER.
                 </h4>
                 
-                {/* Verified Badge Icon */}
-                <div className="mt-6 pt-5 border-t border-blue-100 w-full flex justify-center">
-                   <div className="flex items-center gap-2 bg-blue-600 text-white px-4 py-1.5 rounded-full text-[8px] font-black uppercase tracking-widest shadow-lg shadow-blue-600/20">
-                      <CheckCircle2 size={10} strokeWidth={3} /> Verified Merchant
-                   </div>
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 w-fit px-4 py-2 rounded-xl">
+                   <CheckCircle2 size={14} className="text-indigo-200" />
+                   <span className="text-[9px] font-black uppercase tracking-widest">Verified Merchant</span>
                 </div>
               </div>
             </div>
@@ -131,53 +111,53 @@ export default function Contact() {
 
           {/* --- CONTACT FORM MODULE --- */}
           <div className="lg:col-span-8">
-            <div className="bg-white border border-slate-100 p-10 md:p-16 shadow-[0_40px_100px_rgba(0,0,0,0.05)] relative overflow-hidden rounded-[3.5rem] hover:border-blue-100 transition-colors duration-700">
+            <div className="bg-white border border-slate-100 p-8 md:p-16 shadow-[0_30px_80px_rgba(0,0,0,0.05)] relative overflow-hidden rounded-[3rem] hover:border-indigo-100 transition-colors duration-500">
               {status === 'success' ? (
-                <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-24">
-                  <div className="h-20 w-20 rounded-3xl bg-emerald-50 text-emerald-500 flex items-center justify-center mx-auto mb-10 shadow-sm border border-emerald-100">
+                <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-20">
+                  <div className="h-20 w-20 rounded-3xl bg-emerald-50 text-emerald-500 flex items-center justify-center mx-auto mb-8 border border-emerald-100">
                     <CheckCircle2 size={40} strokeWidth={1.5} />
                   </div>
-                  <h2 className="text-4xl font-black text-slate-900 uppercase tracking-tighter mb-4">Request Received.</h2>
-                  <p className="text-slate-400 font-bold uppercase tracking-widest text-[10px] mb-12">A specialist will reach out to you within the next 24 hours.</p>
-                  <button onClick={() => setStatus(null)} className="h-14 px-12 bg-slate-950 text-white rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 transition-all shadow-xl">RESET TERMINAL</button>
+                  <h2 className="text-3xl font-black text-slate-900 uppercase tracking-tight mb-4">Request Received.</h2>
+                  <p className="text-slate-400 font-bold uppercase tracking-widest text-[10px] mb-10">A specialist will reach out within 24 hours.</p>
+                  <button onClick={() => setStatus(null)} className="h-14 px-10 bg-slate-900 text-white rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-indigo-600 transition-all shadow-xl">New Message</button>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-10">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div className="space-y-3">
-                      <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] ml-2">Full Name</label>
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Full Name</label>
                       <input 
-                        required type="text" placeholder="EX. ARTHUR DENT" value={formData.name}
+                        required type="text" placeholder="ARTHUR DENT" value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        className="w-full h-16 px-6 bg-slate-50 border border-slate-100 rounded-2xl focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 outline-none text-xs font-bold uppercase transition-all shadow-inner"
+                        className="w-full h-14 px-6 bg-[#F8FAFC] border border-slate-200 rounded-xl focus:bg-white focus:border-indigo-600 focus:ring-4 focus:ring-indigo-600/5 outline-none text-xs font-bold uppercase transition-all"
                       />
                     </div>
-                    <div className="space-y-3">
-                      <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] ml-2">Email Address</label>
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Email Address</label>
                       <input 
                         required type="email" placeholder="NAME@DOMAIN.COM" value={formData.email}
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        className="w-full h-16 px-6 bg-slate-50 border border-slate-100 rounded-2xl focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 outline-none text-xs font-bold uppercase transition-all shadow-inner"
+                        className="w-full h-14 px-6 bg-[#F8FAFC] border border-slate-200 rounded-xl focus:bg-white focus:border-indigo-600 focus:ring-4 focus:ring-indigo-600/5 outline-none text-xs font-bold uppercase transition-all"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div className="space-y-3">
-                      <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] ml-2">Contact Number</label>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Phone Number</label>
                       <input 
                         type="tel" placeholder="+1 (000) 000-0000" value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                        className="w-full h-16 px-6 bg-slate-50 border border-slate-100 rounded-2xl focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 outline-none text-xs font-bold uppercase transition-all shadow-inner"
+                        className="w-full h-14 px-6 bg-[#F8FAFC] border border-slate-200 rounded-xl focus:bg-white focus:border-indigo-600 focus:ring-4 focus:ring-indigo-600/5 outline-none text-xs font-bold uppercase transition-all"
                       />
                     </div>
-                    <div className="space-y-3">
-                      <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] ml-2">Topic</label>
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Topic</label>
                       <div className="relative">
                         <select 
                           value={formData.subject}
                           onChange={(e) => setFormData({...formData, subject: e.target.value})}
-                          className="w-full h-16 px-6 bg-slate-50 border border-slate-100 rounded-2xl focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 outline-none text-xs font-bold uppercase transition-all appearance-none cursor-pointer shadow-inner pr-12"
+                          className="w-full h-14 px-6 bg-[#F8FAFC] border border-slate-200 rounded-xl focus:bg-white focus:border-indigo-600 focus:ring-4 focus:ring-indigo-600/5 outline-none text-xs font-bold uppercase transition-all appearance-none cursor-pointer pr-12"
                         >
                           <option>General Inquiry</option>
                           <option>Product Support</option>
@@ -190,33 +170,30 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="space-y-3">
-                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] ml-2">Detailed Message</label>
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Detailed Message</label>
                     <textarea 
-                      required rows="5" placeholder="DESCRIBE YOUR INQUIRY IN DETAIL..." value={formData.message}
+                      required rows="4" placeholder="HOW CAN WE ASSIST YOU?" value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      className="w-full p-8 bg-slate-50 border border-slate-100 rounded-[2rem] focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 outline-none text-xs font-bold uppercase transition-all resize-none shadow-inner"
+                      className="w-full p-6 bg-[#F8FAFC] border border-slate-200 rounded-2xl focus:bg-white focus:border-indigo-600 focus:ring-4 focus:ring-indigo-600/5 outline-none text-xs font-bold uppercase transition-all resize-none"
                     ></textarea>
                   </div>
 
-                  <div className="flex justify-center pt-6">
+                  <div className="flex justify-center pt-4">
                     <motion.button 
-                      whileHover={{ scale: 1.02, y: -2 }}
+                      whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       disabled={loading}
-                      className="h-16 px-16 bg-slate-950 text-white rounded-full flex items-center justify-center gap-4 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-blue-600 transition-all shadow-[0_20px_50px_rgba(0,0,0,0.15)] disabled:opacity-50 group"
+                      className="h-14 px-12 bg-slate-900 text-white rounded-xl flex items-center justify-center gap-4 text-[11px] font-black uppercase tracking-widest hover:bg-indigo-600 transition-all shadow-xl disabled:opacity-50"
                     >
                       {loading ? (
                         <Loader2 className="animate-spin" size={20} />
                       ) : (
-                        <>
-                          <div className="h-1.5 w-1.5 rounded-full bg-blue-500 group-hover:bg-white animate-pulse shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
-                          SUBMIT INQUIRY
-                        </>
+                        "Submit Message"
                       )}
                     </motion.button>
                   </div>
-                  {status === 'error' && <p className="text-center text-red-500 text-[10px] font-black uppercase tracking-widest mt-6">Transmission Failed: Please try again</p>}
+                  {status === 'error' && <p className="text-center text-red-500 text-[10px] font-black uppercase tracking-widest mt-4">Submission Failed: Please try again</p>}
                 </form>
               )}
             </div>
@@ -224,13 +201,6 @@ export default function Contact() {
 
         </div>
       </div>
-
-      <style>{`
-        .stroke-text-light {
-          -webkit-text-stroke: 2px #0f172a;
-          color: transparent;
-        }
-      `}</style>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ShoppingBag, Heart, ArrowRight, Check, Plus } from "lucide-react";
+import { ShoppingBag, Heart, ArrowRight, Check, Plus, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import { useState } from "react";
@@ -26,24 +26,19 @@ export default function ProductGrid({ products = [] }) {
   };
 
   return (
-    <section className="px-6 md:px-10 lg:px-16 py-24 lg:py-32 bg-white font-urbanist relative overflow-hidden">
+    <section className="px-6 md:px-10 lg:px-20 py-20 lg:py-32 bg-white font-urbanist relative overflow-hidden">
       
       <div className="max-w-[1920px] mx-auto relative z-10">
-        {/* --- HERO MATCHED SECTION HEADER --- */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-10">
+        {/* --- HEADER --- */}
+        <div className="flex flex-col items-center text-center mb-16 gap-8">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="h-[1px] w-4 bg-blue-600 animate-pulse" />
-              <span className="text-[9px] font-black text-blue-600 uppercase tracking-[0.4em]">Latest Inventory</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tighter uppercase leading-[0.85]">
-              <span className="block mb-2">NEW</span>
-              <span className="text-transparent stroke-text-light">ARRIVALS.</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
+              New <span className="text-indigo-600">Arrivals.</span>
             </h2>
           </div>
-          <Link to="/shop" className="group flex items-center gap-4 text-[11px] font-black text-slate-900 uppercase tracking-[0.2em] hover:text-blue-600 transition-colors mb-2">
+          <Link to="/shop" className="group flex items-center gap-3 text-[11px] font-black text-slate-900 uppercase tracking-widest hover:text-indigo-600 transition-colors bg-slate-50 hover:bg-indigo-50 pl-6 pr-2 py-2 rounded-full border border-slate-100 hover:border-indigo-100">
               Browse Complete Gallery
-              <div className="h-10 w-10 rounded-full border border-slate-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-500">
+              <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white shadow-sm transition-all duration-300">
                 <ArrowRight size={16} />
               </div>
            </Link>
@@ -57,57 +52,57 @@ export default function ProductGrid({ products = [] }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: (i % 5) * 0.05 }}
-                className="group relative bg-slate-50/50 rounded-[2.5rem] border border-slate-100 p-6 flex flex-col transition-all duration-700 hover:bg-white hover:border-blue-100 hover:shadow-[0_40px_80px_rgba(0,0,0,0.04)] h-full overflow-hidden"
+                className="group relative bg-[#F8FAFC] rounded-[2rem] border border-transparent p-6 flex flex-col transition-all duration-500 hover:bg-white hover:border-slate-100 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] h-full overflow-hidden"
               >
                 {/* Wishlist Icon */}
                 <button 
                   onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleWishlist(p); }}
                   className={cn(
-                    "absolute top-5 right-5 z-20 h-9 w-9 rounded-full bg-white border border-slate-100 flex items-center justify-center transition-all duration-500 shadow-sm",
-                    isInWishlist(p.id) ? "text-red-500 shadow-md" : "text-slate-200 hover:text-red-500 hover:scale-110"
+                    "absolute top-5 right-5 z-20 h-10 w-10 rounded-full bg-white border border-slate-100 flex items-center justify-center transition-all duration-300 shadow-sm",
+                    isInWishlist(p.id) ? "text-red-500 shadow-md border-red-100" : "text-slate-300 hover:text-red-500 hover:border-red-100"
                   )}
                 >
-                  <Heart size={15} fill={isInWishlist(p.id) ? "currentColor" : "none"} />
+                  <Heart size={16} fill={isInWishlist(p.id) ? "currentColor" : "none"} />
                 </button>
 
                 {/* Product Visual Area */}
                 <Link to={`/product/${p.slug}`} className="flex-1 flex flex-col pt-4">
                   <div className="relative aspect-square mb-8 flex items-center justify-center p-4">
-                    <div className="absolute inset-0 bg-white rounded-full scale-0 group-hover:scale-90 transition-transform duration-700 opacity-50 shadow-inner" />
+                    <div className="absolute inset-0 bg-white rounded-full scale-0 group-hover:scale-90 transition-transform duration-500 opacity-80 shadow-inner" />
                     <motion.img 
-                      whileHover={{ scale: 1.1, rotate: 2 }}
+                      whileHover={{ scale: 1.05 }}
                       src={getImagePath(p.images)} 
                       alt={p.name}
-                      className="max-w-full max-h-full object-contain mix-blend-multiply relative z-10 transition-transform duration-700"
+                      className="max-w-full max-h-full object-contain mix-blend-multiply relative z-10 transition-transform duration-500 drop-shadow-[0_10px_20px_rgba(0,0,0,0.05)]"
                       onError={(e) => { e.target.src = "https://via.placeholder.com/400x400?text=Not+Found"; }}
                     />
                   </div>
 
                   <div className="space-y-3 px-2">
-                    <span className="text-[8px] font-black text-blue-600 uppercase tracking-[0.3em] bg-blue-50/50 px-2 py-1 rounded-md">{p.brand_name || 'AUTHENTIC'}</span>
-                    <h3 className="text-[14px] font-black text-slate-900 uppercase tracking-tighter line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors duration-500">
+                    <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">{p.brand_name || 'AUTHENTIC'}</span>
+                    <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight line-clamp-2 leading-tight group-hover:text-indigo-600 transition-colors duration-500">
                       {p.name}
                     </h3>
                     <div className="flex items-center justify-between pt-2">
-                      <span className="text-xl font-black text-slate-950 tracking-tighter">${p.price}</span>
+                      <span className="text-xl font-black text-indigo-600 tracking-tight">${p.price}</span>
                     </div>
                   </div>
                 </Link>
 
-                {/* Action Hub - Dynamic Pill */}
-                <div className="mt-8 pt-6 border-t border-slate-100/50">
+                {/* Action Hub */}
+                <div className="mt-8 pt-6 border-t border-slate-100">
                   <motion.button 
                     whileTap={{ scale: 0.95 }}
                     onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleAddToCart(p); }}
                     disabled={addedItems[p.id]}
                     className={cn(
-                      "w-full h-12 rounded-xl flex items-center justify-center gap-3 font-black text-[10px] uppercase tracking-widest transition-all duration-500 shadow-md",
+                      "w-full h-12 rounded-xl flex items-center justify-center gap-3 font-bold text-[11px] uppercase tracking-widest transition-all duration-300 shadow-sm",
                       addedItems[p.id] 
                         ? "bg-emerald-500 text-white shadow-emerald-500/20" 
-                        : "bg-slate-950 text-white hover:bg-blue-600 shadow-black/10 hover:shadow-blue-600/20"
+                        : "bg-slate-900 text-white hover:bg-indigo-600 shadow-black/10 hover:shadow-indigo-600/20"
                     )}
                   >
-                    {addedItems[p.id] ? <Check size={14} /> : <Plus size={14} />}
+                    {addedItems[p.id] ? <Check size={16} /> : <Plus size={16} />}
                     {addedItems[p.id] ? "SUCCESS" : "ADD TO CART"}
                   </motion.button>
                 </div>
@@ -115,14 +110,6 @@ export default function ProductGrid({ products = [] }) {
             ))}
         </div>
       </div>
-
-      {/* Global Styles for Stroke Text */}
-      <style>{`
-        .stroke-text-light {
-          -webkit-text-stroke: 2px #0f172a;
-          color: transparent;
-        }
-      `}</style>
     </section>
   );
 }

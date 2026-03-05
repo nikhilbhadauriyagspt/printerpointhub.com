@@ -46,7 +46,7 @@ export default function BottomNav() {
               to={item.path}
               className="flex flex-col items-center justify-center gap-1 w-full relative"
             >
-              <div className={`relative ${isActive ? 'text-blue-600' : 'text-slate-400'}`}>
+              <div className={`relative ${isActive ? 'text-indigo-600' : 'text-slate-400'}`}>
                 <Icon size={20} strokeWidth={isActive ? 2.5 : 2} />
                 {item.name === 'Store' && cartCount > 0 && (
                   <span className="absolute -top-1.5 -right-1.5 h-4 w-4 bg-black text-white text-[8px] font-black rounded-full flex items-center justify-center">
@@ -56,7 +56,7 @@ export default function BottomNav() {
                 {isActive && (
                   <motion.div 
                     layoutId="bottomNavActive"
-                    className="absolute -top-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full" 
+                    className="absolute -top-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-indigo-600 rounded-full" 
                   />
                 )}
               </div>

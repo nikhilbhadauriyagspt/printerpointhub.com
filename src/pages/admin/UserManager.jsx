@@ -64,7 +64,7 @@ export default function UserManager() {
             <input 
               type="text" 
               placeholder="Search by name or email..." 
-              className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium focus:outline-none focus:border-blue-500 transition-all"
+              className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium focus:outline-none focus:border-indigo-500 transition-all"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
@@ -93,7 +93,7 @@ export default function UserManager() {
                 <tr key={u.id} className="hover:bg-gray-50/50 transition-colors group">
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-3">
-                      <div className="h-10 w-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-black">
+                      <div className="h-10 w-10 bg-blue-100 text-indigo-600 rounded-full flex items-center justify-center font-black">
                         {u.name.charAt(0).toUpperCase()}
                       </div>
                       <div className="flex flex-col">
